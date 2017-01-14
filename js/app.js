@@ -39,7 +39,7 @@ Player.prototype.update = function () {
 Player.prototype.render = function () {
     // Colors for fills that we will need
     var playerColor = "#FF0000";
-    var playerPath = "#FF3F3F";
+    var playerPath = "#FF5959";
 
     // When the player is going in any direction it will draw the new player and fill its path with the path color
     if (this.direction == 'right') {
@@ -81,11 +81,29 @@ Player.prototype.handleInput = function (key) {
 };
 
 // Creat a new player
-var player = new Player((window.innerWidth / 2 ), (window.innerHeight / 2 ), 50, 3, 'up');
+var player = new Player((window.innerWidth / 2 ), (window.innerHeight / 2 ), 20, 1, 'up');
 
 /*
     Territory Object
 */
+var Territory = function (x, y, cordinates) {
+    this.x = x;
+    this.y = y;
+
+    this.cordinates = cordinates;
+    /*
+    cordinates = [
+        [0, 0],
+        [100, 0],
+        [0, 100],
+        [100, 100]
+    ];
+    */
+};
+
+Territory.prototype.update = function () {
+
+};
 
 /*
     Keydown Listener
